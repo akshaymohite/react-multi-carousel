@@ -14,6 +14,7 @@ export function isMouseMoveEvent(
   return "clientX" && "clientY" in e;
 }
 export interface CarouselProps {
+  clientItemWidth?: number,
   responsive: ResponsiveType;
   deviceType?: string;
   ssr?: boolean;

@@ -47,6 +47,9 @@ function getItemClientSideWidth(
   slidesToShow: number,
   containerWidth: number
 ): number {
+  if (props.clientItemWidth) {
+    return props.clientItemWidth;
+  }
   return Math.round(
     containerWidth / (slidesToShow + (props.centerMode ? 1 : 0))
   );
